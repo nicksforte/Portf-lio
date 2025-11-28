@@ -1,44 +1,55 @@
-# Portf-lio - Meu Portfólio Pessoal
+## 🌟 Portfólio Pessoal – Nicksforte
 
-## 🔗 Acesso ao Portfólio
+### 💡 Introdução
 
-Este é o código-fonte do portfólio pessoal de Nicolle Forte O.
+Bem-vindo(a) ao meu portfólio pessoal, uma demonstração visual das minhas habilidades, competências e projetos desenvolvidos.
 
-**Acesse a versão publicada aqui:** [https://nicksforte.github.io/Portf-lio/](https://nicksforte.github.io/Portf-lio/)
+Este site está hospedado no **GitHub Pages** e serve como minha vitrine profissional online.
 
------
-
-## 💡 Sobre o Projeto
-
-Este website serve como uma vitrine organizada para apresentar os melhores **trabalhos e projetos** desenvolvidos por Nicolle ao longo de seu **Ensino Médio Técnico**, com ênfase na especialização em **Internet das Coisas (IoT)**.
-
-O objetivo principal é demonstrar o desenvolvimento acadêmico, habilidades técnicas e o conhecimento adquirido em diversas áreas do saber.
-
-### 🌟 Destaques
-
-O portfólio está estruturado para facilitar a navegação e a visualização dos projetos, incluindo as seguintes seções principais:
-
-  * **Currículo:** Detalhes da formação, experiência e habilidades técnicas.
-  * **Áreas do Conhecimento:** Projetos categorizados por matérias (Linguagens, Ciências da Natureza, Matemática e Ciências Humanas).
-  * **IoT:** Seção dedicada a projetos específicos de Internet das Coisas e Tecnologia.
-  * **Hobbies:** Informações adicionais sobre interesses pessoais e extracurriculares.
-  * **Contato & Votação:** Página para interação e obtenção de feedback.
+**Acesso Direto:**
+[https://nicksforte.github.io/Portf-lio/](https://nicksforte.github.io/Portf-lio/)
 
 -----
 
-## 🛠️ Tecnologias Utilizadas
+### 🧭 Guia de Navegação
 
-O projeto é uma aplicação web estática desenvolvida com o uso de padrões de mercado:
+O portfólio está organizado para que você encontre as informações de maneira rápida e eficiente.
 
-  * **HTML5:** Para a estruturação semântica do conteúdo.
-  * **CSS3:** Para o design, estilização e responsividade da interface.
-  * **JavaScript:** Utilizado para funcionalidades interativas e dinâmicas (como navegação e possivelmente a seção de votação).
+| Seção | Conteúdo Principal |
+| :--- | :--- |
+| **Home/Início** | Primeira impressão e resumo da minha jornada. |
+| **Sobre Mim** | Minha história, formação e minhas *hard skills* (técnicas) e *soft skills* (comportamentais). |
+| **Projetos** | Galeria detalhada dos meus principais trabalhos, incluindo objetivos e tecnologias aplicadas em cada um. |
+| **Contato** | Informações de contato para oportunidades de trabalho ou colaborações. |
+
+**Dica:** Utilize o menu principal do site para alternar entre as seções. Nos projetos, procure por links para a **Demo** (se houver) e o **Código-fonte** (repositório específico do projeto).
 
 -----
 
-## 📧 Contato
+### 💻 Tecnologias (Exemplo)
 
-Para dúvidas, sugestões ou oportunidades de colaboração, sinta-se à vontade para entrar em contato com a autora:
+Este portfólio é um exemplo prático do meu conhecimento em:
 
-  * **Autora:** Nicolle Forte O.
-  * **E-mail:** nicolleforteoli@gmail.com
+  * **Linguagens:** HTML5, CSS3, JavaScript.
+  * **Frameworks/Bibliotecas:** [Ex: React, Bootstrap, SASS].
+  * **Ferramentas:** Git, GitHub.
+  * **Hospedagem:** GitHub Pages.
+
+-----
+
+### 🚫 Aviso de Visualização (Licença)
+
+Este projeto está disponível **APENAS PARA VISUALIZAÇÃO** e tem o propósito exclusivo de demonstrar minhas habilidades técnicas e criativas.
+
+  * O conteúdo, o design e o código-fonte deste portfólio **não podem ser copiados, clonados ou reutilizados** para fins comerciais ou pessoais sem a minha permissão expressa.
+  * Agradeço a compreensão e o respeito aos direitos autorais do meu trabalho.
+
+-----
+
+### 📧 Conecte-se Comigo
+
+Estou sempre aberto a novas conexões e oportunidades.
+
+  * **GitHub:** [https://github.com/nicksforte](https://www.google.com/search?q=https://github.com/nicksforte)
+  * **LinkedIn:** [Seu Perfil do LinkedIn]
+  * **E-mail:** [Seu Melhor E-mail Profissional]
