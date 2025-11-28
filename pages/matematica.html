@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemática - Meu Portfólio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/x-icon" href="../img/icon hk.png">
+    <style>
+        /* Estilos adicionais para as novas seções */
+        .concept-section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background-color: #8B4B63;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            color: #F8E9F0;
+        }
+        
+        .concept-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #A56A7B;
+            padding-bottom: 0.5rem;
+        }
+        
+        .concept-icon {
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+        
+        /* NOVO DESIGN PARA OS CARDS DE MATEMÁTICA */
+        .math-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .math-card {
+            background: linear-gradient(145deg, #9c5f72, #8b4b63);
+            border-radius: 12px;
+            padding: 1.8rem;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            color: #F8E9F0;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .math-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #FF85A2, #D44D7E);
+        }
+
+        .math-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+        }
+
+        .math-card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .math-icon {
+            font-size: 1.8rem;
+            margin-right: 1rem;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .math-card h3 {
+            color: #FF85A2;
+            margin: 0;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .math-card p {
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+            color: #F8E9F0;
+        }
+
+        .formula-box {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 1.2rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 4px solid #D44D7E;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+            color: #F8E9F0;
+            transition: all 0.3s ease;
+        }
+
+        .formula-box:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateX(5px);
+        }
+
+        .formula-box p {
+            margin-bottom: 0.5rem;
+        }
+
+        .formula-box strong {
+            color: #FF85A2;
+        }
+
+        .formula {
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            background: rgba(139, 75, 99, 0.7);
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+            display: inline-block;
+            color: #F8E9F0;
+            border: 1px solid rgba(184, 124, 143, 0.5);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Estilos para outras seções */
+        .skills-section {
+            margin: 3rem 0;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .skill-category {
+            background-color: #8B4B63;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        
+        .skill-category h4 {
+            color: #FF85A2;
+            margin-top: 0;
+            border-bottom: 1px solid #A56A7B;
+            padding-bottom: 0.5rem;
+        }
+        
+        .skill-list {
+            padding-left: 1.2rem;
+            color: #F8E9F0;
+        }
+        
+        .skill-list li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .content-box {
+            background-color: #8B4B63;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            color: #F8E9F0;
+        }
+        
+        .box-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .box-icon {
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+        
+        .box-title {
+            color: #FF85A2;
+            margin: 0;
+        }
+        
+        .box-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .feature-item {
+            background-color: #A56A7B;
+            padding: 1rem;
+            border-radius: 6px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Meu Portfólio</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="curriculo.html">Currículo</a></li>
+                    <li><a href="linguagens.html">Linguagens</a></li>
+                    <li><a href="ciencias-da-natureza.html">Ciências da Natureza</a></li>
+                    <li><a href="matematica.html">Matemática</a></li>
+                    <li><a href="ciencias-humanas.html">Ciências Humanas</a></li>
+                    <li><a href="iot.html">IoT</a></li>
+                    <li><a href="hobbies.html">Hobbies</a></li>
+                    <li><a href="contact-voting.html">Contato & Votação</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="container">
+            <h1>Matemática</h1>
+            <div class="page-intro">
+                <p>Descubra como aplico conceitos matemáticos avançados em projetos de IoT, transformando números em soluções inteligentes e dados em insights valiosos.</p>
+            </div>
+            
+            <!-- CONCEITOS MATEMÁTICOS FUNDAMENTAIS -->
+            <div class="work-grid">
+                <div class="work-card super-fade-in">
+                    <div class="work-icon">÷</div>
+                    <h2>Conceitos Matemáticos Fundamentais</h2>
+                
+                <p>Abaixo estão alguns dos conceitos matemáticos fundamentais que aplico em meus projetos de análise de dados e IoT.</p>
+                </div></div>
+                <div class="math-grid">
+                    <!-- FATORIAL -->
+                    <div class="math-card">
+                        <div class="math-card-header">
+                            <div class="math-icon factorial">!</div>
+                            <h3>Fatorial</h3>
+                        </div>
+                        <p>O fatorial de um número natural n, representado por n!, é o produto de todos os inteiros positivos menores ou iguais a n.</p>
+                        <div class="formula-box">
+                            <p><strong>Fórmula:</strong></p>
+                            <div class="formula">n! = n × (n-1) × (n-2) × ... × 3 × 2 × 1</div>
+                            <p>Por definição: 0! = 1</p>
+                        </div>
+                        <div class="formula-box">
+                            <p><strong>Exemplo:</strong></p>
+                            <p>5! = 5 × 4 × 3 × 2 × 1 = 120</p>
+                        </div>
+                    </div>
+                    
+                    <!-- PERMUTAÇÃO -->
+                    <div class="math-card">
+                        <div class="math-card-header">
+                            <div class="math-icon permutation">P</div>
+                            <h3>Permutação</h3>
+                        </div>
+                        <p>Número de maneiras de organizar n elementos distintos em sequência.</p>
+                        <div class="formula-box">
+                            <p><strong>Fórmula:</strong></p>
+                            <div class="formula">P(n) = n!</div>
+                        </div>
+                        <div class="formula-box">
+                            <p><strong>Exemplo:</strong></p>
+                            <p>De quantas maneiras podemos organizar 3 livros em uma prateleira?</p>
+                            <p>P(3) = 3! = 6 maneiras</p>
+                        </div>
+                    </div>
+                    
+                    <!-- ARRANJO -->
+                    <div class="math-card">
+                        <div class="math-card-header">
+                            <div class="math-icon arrangement">A</div>
+                            <h3>Arranjo</h3>
+                        </div>
+                        <p>Número de maneiras de selecionar e organizar r elementos de um conjunto de n elementos distintos, onde a ordem importa.</p>
+                        <div class="formula-box">
+                            <p><strong>Fórmula:</strong></p>
+                            <div class="formula">A(n, r) = n! / (n - r)!</div>
+                        </div>
+                        <div class="formula-box">
+                            <p><strong>Exemplo:</strong></p>
+                            <p>Quantos códigos de 2 dígitos podemos formar com os números 1, 2, 3, 4?</p>
+                            <p>A(4, 2) = 4! / (4-2)! = 24 / 2 = 12 códigos</p>
+                        </div>
+                    </div>
+                    
+                    <!-- COMBINAÇÃO -->
+                    <div class="math-card">
+                        <div class="math-card-header">
+                            <div class="math-icon combination">C</div>
+                            <h3>Combinação</h3>
+                        </div>
+                        <p>Número de maneiras de selecionar r elementos de um conjunto de n elementos distintos, onde a ordem não importa.</p>
+                        <div class="formula-box">
+                            <p><strong>Fórmula:</strong></p>
+                            <div class="formula">C(n, r) = n! / [r! × (n - r)!]</div>
+                        </div>
+                        <div class="formula-box">
+                            <p><strong>Exemplo:</strong></p>
+                            <p>De quantas maneiras podemos escolher 2 pessoas de um grupo de 5?</p>
+                            <p>C(5, 2) = 5! / [2! × (5-2)!] = 120 / (2 × 6) = 10 maneiras</p>
+                        </div>
+                    </div>
+                    
+                    <!-- PROBABILIDADE -->
+                    <div class="math-card">
+                        <div class="math-card-header">
+                            <div class="math-icon probability">∝</div>
+                            <h3>Probabilidade</h3>
+                        </div>
+                        <p>Medida da chance de um evento ocorrer, variando de 0 (impossível) a 1 (certo).</p>
+                        <div class="formula-box">
+                            <p><strong>Fórmula:</strong></p>
+                            <div class="formula">P(A) = Nº de casos favoráveis / Nº total de casos possíveis</div>
+                        </div>
+                        <div class="formula-box">
+                            <p><strong>Exemplo:</strong></p>
+                            <p>Qual a probabilidade de tirar um ás em um baralho de 52 cartas?</p>
+                            <p>P(ás) = 4 / 52 = 1/13 ≈ 0.077</p>
+                        </div>
+                    </div>
+                    
+                    <!-- JUROS SIMPLES -->
+                    <div class="math-card">
+                        <div class="math-card-header">
+                            <div class="math-icon simple-interest">$</div>
+                            <h3>Juros Simples</h3>
+                        </div>
+                        <p>Juros calculados apenas sobre o valor inicial (capital).</p>
+                        <div class="formula-box">
+                            <p><strong>Fórmula:</strong></p>
+                            <div class="formula">J = C × i × t</div>
+                            <div class="formula">M = C + J = C × (1 + i × t)</div>
+                            <p>Onde: J = juros, C = capital, i = taxa, t = tempo</p>
+                        </div>
+                        <div class="formula-box">
+                            <p><strong>Exemplo:</strong></p>
+                            <p>Um empréstimo de R$ 1.000,00 a 5% ao mês por 3 meses:</p>
+                            <p>J = 1000 × 0,05 × 3 = R$ 150,00</p>
+                            <p>M = 1000 + 150 = R$ 1.150,00</p>
+                        </div>
+                    </div>
+                    
+                    <!-- JUROS COMPOSTOS -->
+                    <div class="math-card">
+                        <div class="math-card-header">
+                            <div class="math-icon compound-interest">$$</div>
+                            <h3>Juros Compostos</h3>
+                        </div>
+                        <p>Juros calculados sobre o capital inicial e também sobre os juros acumulados.</p>
+                        <div class="formula-box">
+                            <p><strong>Fórmula:</strong></p>
+                            <div class="formula">M = C × (1 + i)<sup>t</sup></div>
+                            <p>Onde: M = montante, C = capital, i = taxa, t = tempo</p>
+                        </div>
+                        <div class="formula-box">
+                            <p><strong>Exemplo:</strong></p>
+                            <p>Um investimento de R$ 1.000,00 a 5% ao mês por 3 meses:</p>
+                            <p>M = 1000 × (1 + 0,05)<sup>3</sup> = 1000 × 1,157625 = R$ 1.157,63</p>
+                        </div>
+                    </div>
+                    
+                    <!-- VARIÂNCIA -->
+                    <div class="math-card">
+                        <div class="math-card-header">
+                            <div class="math-icon variance">σ²</div>
+                            <h3>Variância</h3>
+                        </div>
+                        <p>Medidas de dispersão que indicam o quanto os valores de um conjunto de dados se afastam da média.</p>
+                        <div class="formula-box">
+                            <p><strong>Fórmulas:</strong></p>
+                            <div class="formula">Variância (σ²) = Σ(xᵢ - μ)² / N</div>
+                            <p>Onde: xᵢ = cada valor, μ = média, N = número de elementos</p>
+                        </div>
+                        <div class="formula-box">
+                            <p><strong>Exemplo:</strong></p>
+                            <p>Para o conjunto {2, 4, 6, 8, 10}:</p>
+                            <p>Média = 6, Variância = 8</p>
+                        </div>
+                    </div>
+                    
+                    <!-- DESVIO PADRÃO -->
+                    <div class="math-card">
+                        <div class="math-card-header">
+                            <div class="math-icon standard-deviation">σ</div>
+                            <h3>Desvio Padrão</h3>
+                        </div>
+                        <p>Medidas de dispersão que indicam o quanto os valores de um conjunto de dados se afastam da média.</p>
+                        <div class="formula-box">
+                            <p><strong>Fórmulas:</strong></p>
+                            <div class="formula">Desvio Padrão (σ) = √Σ(xᵢ - μ)² / N</div>
+                            <p>Onde: xᵢ = cada valor, μ = média, N = número de elementos</p>
+                        </div>
+                        <div class="formula-box">
+                            <p><strong>Exemplo:</strong></p>
+                            <p>Para o conjunto {2, 4, 6, 8, 10}:</p>
+                            <p>Média = 6, Desvio Padrão = √8 ≈ 2,83</p>
+                        </div>
+                    </div>
+                </div>
+        
+            
+            
+            <!-- ÁREA E VOLUME DE SÓLIDOS GEOMÉTRICOS -->
+            <div class="work-grid">
+                <div class="work-card super-fade-in">
+                    <div class="work-icon">x</div>
+                    <h2>Área e Volume de Sólidos Geométricos</h2>
+                </div></div>
+                <div class="math-grid">
+                    <!-- CUBO -->
+                    <div class="math-card">
+                        <div class="math-card-header">
+                            <div class="math-icon cube">■</div>
+                            <h3>Cubo</h3>
+                        </div>
+                        <div class="formula-box">
+                            <p><strong>Área:</strong> A = 6 × a²</p>
+                            <p><strong>Volume:</strong> V = a³</p>
+                            <p>Onde: a = aresta</p>
+                        </div>
+                    </div>
+                    
+                    <!-- PARALELEPÍPEDO -->
+                    <div class="math-card">
+                        <div class="math-card-header">
+                            <div class="math-icon parallelepiped">▬</div>
+                            <h3>Paralelepípedo</h3>
+                        </div>
+                        <div class="formula-box">
+                            <p><strong>Área:</strong> A = 2(ab + ac + bc)</p>
+                            <p><strong>Volume:</strong> V = a × b × c</p>
+                            <p>Onde: a, b, c = dimensões</p>
+                        </div>
+                    </div>
+                    
+                    <!-- CILINDRO -->
+                    <div class="math-card">
+                        <div class="math-card-header">
+                            <div class="math-icon cylinder">○</div>
+                            <h3>Cilindro</h3>
+                        </div>
+                        <div class="formula-box">
+                            <p><strong>Área lateral:</strong> A<sub>l</sub> = 2πrh</p>
+                            <p><strong>Área total:</strong> A<sub>t</sub> = 2πr(h + r)</p>
+                            <p><strong>Volume:</strong> V = πr²h</p>
+                            <p>Onde: r = raio, h = altura</p>
+                        </div>
+                    </div>
+                    
+                    <!-- ESFERA -->
+                    <div class="math-card">
+                        <div class="math-card-header">
+                            <div class="math-icon sphere">●</div>
+                            <h3>Esfera</h3>
+                        </div>
+                        <div class="formula-box">
+                            <p><strong>Área:</strong> A = 4πr²</p>
+                            <p><strong>Volume:</strong> V = (4/3)πr³</p>
+                            <p>Onde: r = raio</p>
+                        </div>
+                    </div>
+                    
+                    <!-- CONE -->
+                    <div class="math-card">
+                        <div class="math-card-header">
+                            <div class="math-icon cone">▲</div>
+                            <h3>Cone</h3>
+                        </div>
+                        <div class="formula-box">
+                            <p><strong>Área lateral:</strong> A<sub>l</sub> = πrg</p>
+                            <p><strong>Área total:</strong> A<sub>t</sub> = πr(g + r)</p>
+                            <p><strong>Volume:</strong> V = (1/3)πr²h</p>
+                            <p>Onde: r = raio, h = altura, g = geratriz</p>
+                        </div>
+                    </div>
+                    
+                    <!-- PIRÂMIDE -->
+                    <div class="math-card">
+                        <div class="math-card-header">
+                            <div class="math-icon pyramid">◭</div>
+                            <h3>Pirâmide</h3>
+                        </div>
+                        <div class="formula-box">
+                            <p><strong>Área lateral:</strong> Soma das áreas das faces laterais</p>
+                            <p><strong>Área total:</strong> A<sub>l</sub> + A<sub>b</sub></p>
+                            <p><strong>Volume:</strong> V = (1/3) × A<sub>b</sub> × h</p>
+                            <p>Onde: A<sub>b</sub> = área da base, h = altura</p>
+                        </div>
+                    </div>
+                </div>
+            
+        
+            <!-- ÁREAS DA MATEMÁTICA -->
+            <div class="skills-section">
+                <h2 style="text-align: center; margin-bottom: 3rem;">Áreas da Matemática Aplicada</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Análise de Dados</h4>
+                        <ul class="skill-list">
+                            <li>Estatística Descritiva</li>
+                            <li>Probabilidade</li>
+                            <li>Correlação</li>
+                            <li>Visualização</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Modelagem</h4>
+                        <ul class="skill-list">
+                            <li>Funções Matemáticas</li>
+                            <li>Equações Diferenciais</li>
+                            <li>Otimização</li>
+                            <li>Simulação</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Computação</h4>
+                        <ul class="skill-list">
+                            <li>Algoritmos</li>
+                            <li>Lógica Matemática</li>
+                            <li>Teoria dos Grafos</li>
+                            <li>Computação Numérica</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>                  
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Meu Portfólio. Todos os direitos reservados.</p>
+            <p>Entre em contato: <a href="mailto:nicolleforteoli@gmail.com">nicolleforteoli@gmail.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>
